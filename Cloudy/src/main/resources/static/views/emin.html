@@ -4,70 +4,52 @@
         <meta charset="UTF-8">
         <meta name ="viewport" content ="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-        <link rel="stylesheet" href="/Cloudy/src/main/resources/static/css/app/about.css"/>
+        <link rel="stylesheet" href="../css/app/style.css"/>
+        <link rel="stylesheet" href="../css/app/about.css"/>
         <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet"/>
-        <title>CS 319 Weather App</title>
+        <title>About Me</title>
         <audio src="backround1.mp3" id="audio" loop="loop"></audio>
     </head>
     <header class="Header" data-header>
-        <div class="Header-inner" data-header-nav>
-            <nav class="Header-nav" data-nav>
-                <div class="Header-nav-item" data-nav-item="1">
-                    <a href="index.html">Home</a>
+            <div class="Header-inner" data-header-nav>
+                <nav class="Header-nav" data-nav>
+                    <div class="Header-nav-item" data-nav-item="1">
+                        <a href="index.html">Home</a>
+                    </div>
+    
+                    <div class="Header-nav-item" data-nav-item="2">
+                        <a href="emin.html">About Emin</a>
+                    </div>
+                </nav>
+                <div class="MobileNav-trigger" data-mobile-nav-trigger>
+                    <div class="MobileNav-trigger-inner"></div>
                 </div>
-                <div class="Header-nav-item" data-nav-item="2">
-                    <a href="emin.html">About Emin</a>
-                </div>
-            </nav>
-            <div class="MobileNav-trigger" data-mobile-nav-trigger>
-                <div class="MobileNav-trigger-inner"></div>
             </div>
-        </div>
     </header>
+    <body>
+        <div class="box">
+            <img src="/Cloudy/Cloudy/src/main/resources/static/images/profile.jpg" alt="" class="box-img">
+            <h1>Emin Okic</h1>
+            <h5>Software Engineer</h5>
+            <p>A Software Engineer who is a programmer who specializes in, 
+                and enjoys, the development of World Wide Web applications. </p>
+            <ul>
+                <li><a href="https://www.facebook.com/emin.okic"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/eminokic/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/eminokic"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+            </ul>     
+        </div>
+    </body>
 
-<div id="header"></div>
-<div class="left"></div>
-<div class="stuff">
-  <br><br>
-  <h1>Resume</h1>
-  <h2>Emin</h2>
-  <hr />
-  <br>
-  <p class="head">Interests</p>
-  <ul>
-    <li>Drawing</li>
-    <li>Photography</li>
-    <li>Design</li>
-    <li>Programming</li>
-    <li>Computer Science</li>
-  </ul>
-  <p class="head">Skills</p>
-  <ul>
-    <li>Web Design with HTML & CSS</li>
-  </ul>
-  <p class="head">Education</p>
-  <ul>
-    <a href="http://www.wiltonhighschool.org/pages/Wilton_High_School">
-      <li>Wilton High School</li>
-    </a>
-    <!--Link-->
-    <a href="https://www.silvermineart.org/">
-      <li>Silvermine School of Arts</li>
-    </a>
-    <li>Codeacademy</li>
-  </ul>
-  <p class="head">Experience</p>
-  <ul>
-    <li>Student at Iowa State</li>
-    <li>Babysitter</li>
-  </ul>
-  <p class="head">Extracurriculars</p>
-  <ul>
-    <li>Recycling Club</li>
-    <li>Gardening Club</li>
-    <li>Book Club</li>
-  </ul>
-</div>
-<div class="right"></div>
-<div id="footer">
-  <h2 id="name">Emin</h2></div>
+        <script type="text/javascript">
+        setTimeout(function(){
+            document.getElementById("audio").play();
+        }, 8000)
+        </script>
+
+        <script src="../js/app/jquery-3.2.1.min.js"></script>
+        <script src="../js/app/skycons.js"></script>
+        <script src="../js/app/app.js"></script>
+        <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    
+</html>
