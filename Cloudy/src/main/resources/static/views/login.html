@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/app/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/app/login.css">
+</head>
+<body>
+	<div class="container">
+
+		<form name="login" onsubmit="validateForm();" methods="get">
+			<label for="username"><b>Username: </b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+
+			<label for="password"><b>Password: </b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+			<div class="remember_me">
+				<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+			</div>
+			<button class="submit" name="submit" onclick="window.location.href = 'index.html';">Login</button>
+		</form>
+	</div>
+
+	<script>
+	var count = 2;
+	function validateForm() {
+		const Http = new XMLHttpRequest();
+		var un = document.login.username.value;
+		var pw = document.login.password.value;
+		// const url = 'http://coms-319-084.cs.iastate.edu:8080/use/get/4/' + un + '/' + pw;
+		const url = 'http://localhost:8080/use/get/4/' + un + '/' + pw;
+		Http.open("GET", url);
+		Http.send();
+		Http.onreadystatechange=(e)=>{
+			var txt = Http.responseText;
+			console.log(txt);
+		}
+		console.log("Login Complete!");
+	}
+	</script>
+</body>
+</html>

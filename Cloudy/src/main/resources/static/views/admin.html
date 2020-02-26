@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<link rel="stylesheet" href="../css/app/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/app/signup.css">
+</head>
+<body>
+	<div class="container">
+		<button class="submit" name="User List" onclick="validate();">User List</button>
+	</div>
+
+	<script>
+	function validate() {
+		const Http = new XMLHttpRequest();
+		// const url = 'http://coms-319-084.cs.iastate.edu:8080/use/get/1';
+		const url = 'http://localhost:8080/use/get/1';
+		var txt;
+		Http.open("GET", url);
+		Http.send();
+		Http.onreadystatechange=(e)=>{
+			txt = Http.responseText;
+			document.write(txt);
+		}
+		console.log("finished");
+	}
+	</script>
+</body>
+</html>

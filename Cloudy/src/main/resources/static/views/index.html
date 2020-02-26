@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content ="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <link rel="stylesheet" href="../css/app/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet"/>
+        <title>CS 319 Weather App</title>
+        <audio src="backround1.mp3" id="audio" loop="loop"></audio>
+    </head>
+    <header class="Header" data-header>
+            <div class="Header-inner" data-header-nav>
+                <nav class="Header-nav" data-nav>
+                    <div class="Header-nav-item" data-nav-item="1">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="Header-nav-item" data-nav-item="2">
+                        <a href="emin.html">About Emin</a>
+                    </div>
+                    <div class="Header-nav-item" data-nav-item="3">
+                        <a href="josh.html">About Josh</a>
+                    </div>
+                </nav>
+                <div class="MobileNav-trigger" data-mobile-nav-trigger>
+                    <div class="MobileNav-trigger-inner"></div>
+                </div>
+            </div>
+        </header>
+    <body>     
+        <div class="container">
+            <div class="weather-box">
+                <div class="row1">
+                    <h2 class="weather-location"></h2>
+                    <canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
+                </div>
+                <div class="row2">
+                    <h1 class="temp"></h1>
+                    <span class="temp-type">°C</span>
+                </div>
+                <h2 class="weather-description"></h2>
+                <p class="made-byEO">Made by Emin Okic and Josh Loftus</p>
+                <p class="made-byJL">with FFC WEATHER API</p>
+			</div>
+			<button onclick="window.location.href = 'signup.html';">Sign up</button>
+			<button onclick="window.location.href = 'login.html';">Login</button>
+        </div>
+
+        <script type="text/javascript">
+        setTimeout(function(){
+            document.getElementById("audio").play();
+        }, 8000)
+        </script>
+
+        <script src="../js/app/jquery-3.2.1.min.js"></script>
+        <script src="../js/app/skycons.js"></script>
+        <script src="../js/app/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" href="../css/app/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/app/signup.css">
+</head>
+<body>
+	<div class="container">
+
+		<form name="signup" onsubmit="validateForm();" method="POST">
+			<label for="username"><b>Username: </b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+
+			<label for="password"><b>Password: </b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+
+			<div class="eml"><label for="email"><b>Email: </b></label></div>
+			<input type="text" placeholder="Enter Email" name="email" required>
+
+			<div class="remember_me">
+				<label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+			</div>
+			<button onclick="window.location.href = 'index.html';" type="submit">Sign up</button>
+		</form>
+	</div>
+
+<html>
+	<script>
+	function validateForm() {
+		const Http = new XMLHttpRequest();
+		var un = document.signup.username.value;
+		var pw = document.signup.password.value;
+		var em = document.signup.email.value;
+		// const url = 'http://coms-319-084.cs.iastate.edu:8080/use/post/2/' + un + '/' + pw + '/' + em;
+		const url = 'http://localhost:8080/use/post/2/' + un + '/' + pw + '/' + em;
+		Http.open("POST", url);
+		Http.send();
+		Http.onreadystatechange=(e)=>{
+			var txt = Http.responseText;
+			console.log(txt);
+		}
+		console.log("Sign Up Complete!");
+	}
+	</script>
+</body>
+</html>
